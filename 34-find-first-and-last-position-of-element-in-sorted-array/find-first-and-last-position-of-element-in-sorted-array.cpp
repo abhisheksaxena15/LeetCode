@@ -1,13 +1,13 @@
 class Solution {
 public:
-    // Helper function to find the first occurrence of target
+    
     int findFirst(vector<int>& nums, int target) {
         int s = 0, e = nums.size() - 1, ans = -1;
         while (s <= e) {
             int mid = s + (e - s) / 2;
             if (nums[mid] == target) {
-                ans = mid; // Update answer
-                e = mid - 1; // Move left to find earlier occurrence
+                ans = mid; 
+                e = mid - 1; 
             } else if (nums[mid] < target) {
                 s = mid + 1;
             } else {
@@ -17,14 +17,14 @@ public:
         return ans;
     }
 
-    // Helper function to find the last occurrence of target
+   
     int findLast(vector<int>& nums, int target) {
         int s = 0, e = nums.size() - 1, ans = -1;
         while (s <= e) {
             int mid = s + (e - s) / 2;
             if (nums[mid] == target) {
-                ans = mid; // Update answer
-                s = mid + 1; // Move right to find later occurrence
+                ans = mid; 
+                s = mid + 1; 
             } else if (nums[mid] < target) {
                 s = mid + 1;
             } else {
